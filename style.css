@@ -1,90 +1,68 @@
- body {
-	font-family: Arial, Helvetica, sans-serif;
-  font-size: 50px;
+.cont_lecteur{
+	position: relative;
+	display: inline-block;
+	width: 470px;
+	height: 149px;
+	border-radius: 10px;
+	background-color: grey;
+
 }
 
-h1, div#horloge {
-	display: flex;
-	align-items: center;
-  justify-content: center;
+.img-song{
+	position: relative;
+	display: inline-block;
+	width: 130px;
+	height: 130px;
+	background-color: white;
+	box-shadow: 0 0 6px 2px rgba(0,0,0,0.8);
+    top: 10px;
+    left: 10px;
 }
-h1 {
-  margin-top: 200px;
+
+.control_lecteur{
+	position: relative;
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 10px;
 }
-div#horloge {
-	position: fixed;
-  width: 800px;
-  height: 800px;
-  left: calc(50% - 400px);
-  top: calc(50% - 400px);
+
+.img-son,.control_lecteur{
+	vertical-align: top;
 }
-div#cadran {
-  width: 792px;
-  height: 792px;
-  border-radius: 50%;
-  box-shadow: 0 0 8px 0px #ababab;
+
+h3,h4{
+	margin: 0;
 }
-div#affichage {
-  position: absolute;
-  width: 200px;
-  height: 50px;
-  top: 65%;
-  line-height: 50px;
-  background: rgba(0,0,0,0.03);
-  border: 1px solid grey;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  text-align: center;
+
+.titre-song,h3{
+	color: white;
+	font-size: 18px;
+	color: white;
+	text-transform: capitalize;
+	margin-bottom: 10px;
 }
-div.heuresCadran {
-  position: absolute;
-  top: 0;
-  left: calc(50% - 40px);
-  width: 80px;
-  height: 776px;
-  text-align: center;
-  font-size: 1.4rem;
-  padding-top: 20px;
+
+.group-btn{
+	width: 100%;
 }
-div#cadran::after {
-  content: '';
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  position: absolute;
-  top: calc(50% - 15px);
-  left: calc(50% - 15px);
-  z-index: 10;
-  background: #000;
+
+/* ########## BOUTONS ########## */
+.btn-prev,.btn-play, .btn-pause, .btn-next, .btn-stop{
+	display: inline-block;
+	vertical-align: middle;
+	width:35px;
+	height:35px;
 }
-div#aiguilleHeu, div#aiguilleMin, div#aiguilleSec {
-  box-shadow: 0 0 10px 0px #949494;
+.btn-prev {
+	width:28px;
+	height:28px;
+	background-image:url('img/btn-back.png');
 }
-div#aiguilleHeu {
-  position: absolute;
-  width: 15px;
-  height: 200px;
-  left: calc(50% - 7.5px);
-  top: calc(50% - 200px);
-  transform-origin: center bottom;
-  background: rgb(208, 60, 60);
-  border-radius: 10px;
+.btn-next {
+	width:28px;
+	height:28px;
+	background-image:url('img/btn-next.png');
 }
-div#aiguilleMin, div#aiguilleSec {
-  position: absolute;
-  width: 15px;
-  height: 300px;
-  left: calc(50% - 7.5px);
-  top: calc(50% - 300px);
-  transform-origin: center bottom;
-  background: rgb(208, 60, 60);
-  border-radius: 10px;
-}
-div#aiguilleSec {
-  left: calc(50% - 2.5px);
-  height: 350px;
-  top: calc(50% - 350px);
-  background: black;
-  width: 5px;
-  border-radius: 5px;
-}
+.btn-play {background-image:url('img/btn-play.png');}
+.btn-pause {background-image:url('img/btn-pause.png');}
+.btn-stop {background-image:url('img/btn-stop.png');}

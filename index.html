@@ -5,20 +5,33 @@
   <meta charset="utf-8">
   <title>TEST Souris</title>
   <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="bundle/index.js"></script>
 </head>
 
 <body>
-  <h1>(+_+)</h1>
-  <div id="horloge">
-    <div id="cadran"></div>
-    <div id="affichage"></div>
-    <div id="aiguilleHeu"></div>
-    <div id="aiguilleMin"></div>
-    <div id="aiguilleSec"></div>
-    <div id="axe"></div>
-  </div>
 
-  <script src="bundle/index.js"></script>
+  <div id="lecteur">
+
+		<audio id="player" src="mp3/MONEY MONEY.mp3"></audio>
+
+		<div class="cont_lecteur">
+			<div class="img-song">
+				<img src="" alt="">
+			</div>
+			<div class="control_lecteur">
+				<h3 class="titre-son">Nom de la chanson</h3>
+				<h4 class="non_artiste">Nom du chanteur</h4>
+				<div class="group-btn">
+				<div class="btn-prev"></div>
+				<div id="pp" class="btn-play"></div>
+				<div class="btn-stop"></div>
+				<div class="btn-next"></div>
+			</div>
+			</div>
+
+		</div>
+	</div>
+
 </body>
 
 </html>
