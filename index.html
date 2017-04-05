@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>TEST Souris</title>
+  <link rel="stylesheet" type="text/css" href="normalize.css">
   <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="src/data.js"></script>
   <script src="bundle/index.js"></script>
 </head>
 
@@ -12,7 +14,7 @@
 
   <div id="lecteur">
 
-		<audio id="player" src="mp3/MONEY MONEY.mp3"></audio>
+		<audio id="player"></audio>
 
 		<div class="cont_lecteur">
 			<div class="img-song">
@@ -20,7 +22,7 @@
 			</div>
 			<div class="control_lecteur">
 				<h3 class="titre-son">Nom de la chanson</h3>
-				<h4 class="non_artiste">Nom du chanteur</h4>
+				<h4 class="nom-artiste">Nom du chanteur</h4>
 				<div class="group-btn">
 				<div class="btn-prev"></div>
 				<div id="pp" class="btn-play"></div>
@@ -31,6 +33,10 @@
 
 		</div>
 	</div>
+
+  <div id="listing">
+    <select></select>
+  </div>
 
 </body>
 
