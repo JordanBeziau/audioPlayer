@@ -9,7 +9,9 @@ window.addEventListener('DOMContentLoaded', () => {
         affTitre = document.querySelector('h3'),
         affArtiste = document.querySelector('h4'),
         affCover = document.querySelector('.img-song img'),
-        affListing = document.querySelector('#listing select');
+        affListing = document.querySelector('#listing select'),
+				affProgressBar = document.querySelector('div.progressBar > div.progress'),
+				affBtnProgress = document.querySelector('div.progressBar > div.btn-progress');
   // Initialisation
   const nbrMusiques = tabMusiques.length;
   let listing = '';
@@ -60,23 +62,19 @@ window.addEventListener('DOMContentLoaded', () => {
       numMusique--;
     }
     setActualAudio();
+		playAudio();
   });
 
   // Gestion du BTN NEXT
   btnNext.addEventListener('click', () => {
-    if (numMusique >= nbrMusiques - 1) {
-      numMusique = 0;
-    } else {
-      numMusique++;
-    }
-    setActualAudio();
-    playAudio();
+		nextAudio();
   });
 
   // Barre de temps audio
   player.addEventListener('timeupdate', () => {
     progressBar = player.currentTime * 100 / player.duration;
-    console.log(progressBar);
+    affProgressBar.style.width = `${progressBar}%`;
+		affBtnProgress.style.left = `${progressBar}%`;
   });
 
   // Fonction set actuel piste audio
@@ -91,4 +89,14 @@ window.addEventListener('DOMContentLoaded', () => {
     player.play();
     btnPP.className = "btn-pause";
   }
+	// Fonction Next piste
+	const nextAudio = () => {
+		if (numMusique >= nbrMusiques - 1) {
+      numMusique = 0;
+    } else {
+      numMusique++;
+    }
+    setActualAudio();
+    playAudio();
+	}
 });
